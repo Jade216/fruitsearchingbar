@@ -9,7 +9,7 @@ function search(str) {
      for (let i=0; i<fruit.length; i++){
 		let fruits = fruit[i].toLowerCase();
 		if (fruits.includes(newStr)){
-			results.push(fruits[i])
+			results.push(fruit[i])
 		}
 	 }
 
@@ -17,8 +17,10 @@ function search(str) {
 }
 
 function searchHandler(e) {
+	console.log(e.target.value)
 	let inputVal = e.target.value;
 	let results = search(inputVal);
+	console.log(results);
 	showSuggestions(results, inputVal);
 }
 
